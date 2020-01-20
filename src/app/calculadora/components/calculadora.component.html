@@ -1,3 +1,124 @@
-<p>
-  calculadora works!
-</p>
+<form>
+  <div class="row">
+    <input
+      id="display"
+      name="display"
+      type="text"
+      [value]="display"
+      readonly>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <button
+        id="btn7"
+        type="button"
+        (click)="addNumber('7')"
+        class="btn btn-primary">7
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn8"
+        type="button"
+        (click)="addNumber('8')"
+        class="btn btn-default">8
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn9"
+        type="button"
+        (click)="addNumber('9')"
+        class="btn btn-default">9
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btnDivision"
+        type="button"
+        class="btn btn-default">/
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <button
+        id="btn4"
+        type="button"
+        (click)="addNumber('4')"
+        class="btn btn-default">4
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn5"
+        type="button"
+        (click)="addNumber('5')"
+        class="btn btn-default">5
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn6"
+        type="button"
+        (click)="addNumber('6')"
+        class="btn btn-default">6
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btnMultiplication"
+        type="button"
+        class="btn btn-default">*
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <button
+        id="btn1"
+        type="button"
+        (click)="addNumber('1')"
+        class="btn btn-default">1
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn2"
+        type="button"
+        (click)="addNumber('2')"
+        class="btn btn-default">2
+      </button>
+    </div>
+    <div class="col-xs-3">
+      <button
+        id="btn3"
+        type="button"
+        (click)="addNumber('3')"
+        class="btn btn-default">3
+      </button>
+    </div>
+    <div class="col-xs-3">
+        <button id="btnSub" type="button" class="btn btn-default">-</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <button
+        id="btn0"
+        type="button"
+        (click)="addNumber('0')"
+        class="btn btn-default">0
+    </button>
+    </div>
+    <div class="col-xs-3">
+        <button id="btnDot" type="button" class="btn btn-default">.</button>
+    </div>
+    <div class="col-xs-3">
+        <button id="btnPlus" type="button" class="btn btn-default">+</button>
+    </div>
+    <div class="col-xs-3">
+        <button id="btnEqual" type="button" class="btn btn-default">=</button>
+    </div>
+  </div>
+</form>
