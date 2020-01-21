@@ -28,10 +28,20 @@ export class CalculadoraComponent implements OnInit {
   }
 
   addNumber(num: string): void {
-    if (this.number1 !== null) {
-      this.number2 = num;
+    if (this.operation !== null) {
+      this.number2 = this.calculadoraService.alocateNumbers(this.number2, num, this.operation);
     } else {
-      this.number1 = num;
+      this.number1 = this.calculadoraService.alocateNumbers(this.number1, num, this.operation);
+    }
+  }
+
+  calculate(): void {
+    this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
+  }
+
+  setOperation(operation): void {
+    if (operation === 'DIVISION') {
+      this.operation = 1;
     }
   }
 
