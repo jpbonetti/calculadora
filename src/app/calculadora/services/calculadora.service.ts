@@ -15,17 +15,23 @@ export class CalculadoraService {
     let result = 0;
     switch (operation) {
       case OperationEnum.DIVISION:
-          result = this.calculateDivision(number1, number2);
+          result = parseFloat(number1) / parseFloat(number2);
           break;
       case OperationEnum.MULTIPLICATION:
-          result = this.calculateMultiplication(number1, number2);
+          result = parseFloat(number1) * parseFloat(number2);
           break;
       case OperationEnum.SUBTRACTION:
-          result = this.calculateSubtraction(number1, number2);
+          result = parseFloat(number1) - parseFloat(number2);
           break;
       case OperationEnum.ADDITION:
-          result = this.calculateAddition(number1, number2);
+          result = parseFloat(number1) + parseFloat(number2);
           break;
+      case OperationEnum.PERCENTAGE:
+        result = parseFloat(number1) / 100;
+        break;
+      case OperationEnum.SQUARE_ROOT:
+        result = Math.sqrt(parseFloat(number1));
+        break;
     }
 
     return result;
@@ -53,22 +59,6 @@ export class CalculadoraService {
     }
 
     return numberDisplay;
-  }
-
-  calculateDivision(number1: string, number2: string): number {
-    return parseFloat(number1) / parseFloat(number2);
-  }
-
-  calculateMultiplication(number1: string, number2: string): number {
-    return parseFloat(number1) * parseFloat(number2);
-  }
-
-  calculateSubtraction(number1: string, number2: string): number {
-    return parseFloat(number1) - parseFloat(number2);
-  }
-
-  calculateAddition(number1: string, number2: string): number {
-    return parseFloat(number1) + parseFloat(number2);
   }
 
   concatString(string1: string, string2: string): string {

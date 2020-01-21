@@ -35,8 +35,11 @@ export class CalculadoraComponent implements OnInit {
     }
   }
 
-  calculate(): void {
-    if (this.number1 && this.number2) {
+  calculate(operation): void {
+    if (operation !== null) {
+      this.setOperation(operation);
+      this.result = this.calculadoraService.calculate(this.number1, null, this.operation);
+    } else if (this.number1 && this.number2) {
       this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
     }
   }

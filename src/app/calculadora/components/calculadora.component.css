@@ -5,9 +5,12 @@ button {
 }
 
 .display {
+  height: 50px;
   border: 1px solid #E0E0E0;
   background: white;
   font-size: 20px;
+  margin-bottom: 3px;
+  border-radius: 4px;
 }
 
 .btn-numbers {
