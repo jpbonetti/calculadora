@@ -40,9 +40,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   setOperation(operation): void {
-    if (operation === 'DIVISION') {
-      this.operation = 1;
-    }
+    this.operation = operation;
   }
 
   get display(): string {

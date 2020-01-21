@@ -25,6 +25,12 @@ export class CalculadoraService {
     let result = 0;
     if (operation === 1) {
       result = parseInt(number1) / parseInt(number2);
+    } else if (operation === 2) {
+      result = parseInt(number1) * parseInt(number2);
+    } else if (operation === 3) {
+      result = parseInt(number1) - parseInt(number2);
+    } else {
+      result = parseInt(number1) + parseInt(number2);
     }
 
     return result;
