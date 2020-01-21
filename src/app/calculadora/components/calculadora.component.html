@@ -5,14 +5,14 @@
         id="btnClean"
         type="button"
         (click)="clean()"
-        class="btn btn-primary">C
+        class="btn btn-operators">C
       </button>
     </div>
     <div class="col-xs-9 col-md-3 col-lg-3">
       <input
         id="display"
         name="display"
-        class="form-control text-right"
+        class="form-control text-right display"
         type="text"
         [value]="display"
         readonly>
@@ -24,7 +24,7 @@
         id="btn7"
         type="button"
         (click)="addNumber('7')"
-        class="btn btn-default">7
+        class="btn btn-numbers">7
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -32,7 +32,7 @@
         id="btn8"
         type="button"
         (click)="addNumber('8')"
-        class="btn btn-default">8
+        class="btn btn-numbers">8
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -40,7 +40,7 @@
         id="btn9"
         type="button"
         (click)="addNumber('9')"
-        class="btn btn-default">9
+        class="btn btn-numbers">9
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -48,7 +48,7 @@
         id="btnDivision"
         type="button"
         (click)="setOperation(1)"
-        class="btn btn-default">/
+        class="btn btn-operators">/
       </button>
     </div>
   </div>
@@ -58,7 +58,7 @@
         id="btn4"
         type="button"
         (click)="addNumber('4')"
-        class="btn btn-default">4
+        class="btn btn-numbers">4
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -66,7 +66,7 @@
         id="btn5"
         type="button"
         (click)="addNumber('5')"
-        class="btn btn-default">5
+        class="btn btn-numbers">5
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -74,7 +74,7 @@
         id="btn6"
         type="button"
         (click)="addNumber('6')"
-        class="btn btn-default">6
+        class="btn btn-numbers">6
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -82,7 +82,7 @@
         id="btnMultiplication"
         type="button"
         (click)="setOperation(2)"
-        class="btn btn-default">*
+        class="btn btn-operators">*
       </button>
     </div>
   </div>
@@ -92,7 +92,7 @@
         id="btn1"
         type="button"
         (click)="addNumber('1')"
-        class="btn btn-default">1
+        class="btn btn-numbers">1
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -100,7 +100,7 @@
         id="btn2"
         type="button"
         (click)="addNumber('2')"
-        class="btn btn-default">2
+        class="btn btn-numbers">2
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -108,7 +108,7 @@
         id="btn3"
         type="button"
         (click)="addNumber('3')"
-        class="btn btn-default">3
+        class="btn btn-numbers">3
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -116,7 +116,7 @@
         id="btnSub"
         type="button"
         (click)="setOperation(3)"
-        class="btn btn-default">-
+        class="btn btn-operators">-
       </button>
     </div>
   </div>
@@ -126,7 +126,7 @@
         id="btn0"
         type="button"
         (click)="addNumber('0')"
-        class="btn btn-default">0
+        class="btn btn-numbers">0
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -134,7 +134,14 @@
         id="btnDot"
         type="button"
         (click)="addNumber('.')"
-        class="btn btn-default">.
+        class="btn btn-numbers">.
+      </button>
+    </div>
+    <div class="col-xs-3 col-sm-1 col-lg-1">
+      <button
+        type="button"
+        (click)="calculate()"
+        class="btn btn-equal">=
       </button>
     </div>
     <div class="col-xs-3 col-sm-1 col-lg-1">
@@ -142,15 +149,7 @@
         id="btnPlus"
         type="button"
         (click)="setOperation(4)"
-        class="btn btn-default">+
-      </button>
-    </div>
-    <div class="col-xs-3 col-sm-1 col-lg-1">
-      <button
-        id="btnEqual"
-        type="button"
-        (click)="calculate()"
-        class="btn btn-default">=
+        class="btn btn-operators">+
       </button>
     </div>
   </div>

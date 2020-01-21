@@ -1,3 +1,28 @@
 button {
   width: 100%;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+
+.display {
+  border: 1px solid #E0E0E0;
+  background: white;
+  font-size: 20px;
+}
+
+.btn-numbers {
+  border: 1px solid #E0E0E0;
+  background-color: #E0E0E0;
+  color: #424242;
+}
+
+.btn-operators {
+  border: 1px solid #9E9E9E;
+  background-color: #9E9E9E;
+  color: white;
+}
+
+.btn-equal {
+  background-color: #2196F3;
+  color: white;
 }
