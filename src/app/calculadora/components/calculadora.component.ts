@@ -36,7 +36,9 @@ export class CalculadoraComponent implements OnInit {
   }
 
   calculate(): void {
-    this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
+    if (this.number1 && this.number2) {
+      this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
+    }
   }
 
   setOperation(operation): void {

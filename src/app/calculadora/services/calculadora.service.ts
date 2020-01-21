@@ -12,6 +12,8 @@ export class CalculadoraService {
     if (newNumber === '.') {
       if (numberDisplay === '') {
         numberDisplay = '0.';
+      } else if(numberDisplay.split('.').length >= 2) {
+        numberDisplay = numberDisplay;
       } else {
         numberDisplay = numberDisplay + '.';
       }
@@ -24,13 +26,13 @@ export class CalculadoraService {
   calculate(number1: string, number2: string, operation: number): number {
     let result = 0;
     if (operation === 1) {
-      result = parseInt(number1) / parseInt(number2);
+      result = parseFloat(number1) / parseFloat(number2);
     } else if (operation === 2) {
-      result = parseInt(number1) * parseInt(number2);
+      result = parseFloat(number1) * parseFloat(number2);
     } else if (operation === 3) {
-      result = parseInt(number1) - parseInt(number2);
+      result = parseFloat(number1) - parseFloat(number2);
     } else {
-      result = parseInt(number1) + parseInt(number2);
+      result = parseFloat(number1) + parseFloat(number2);
     }
 
     return result;
