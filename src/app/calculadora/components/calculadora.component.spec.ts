@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatListModule } from '@angular/material/list';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CalculadoraComponent } from './calculadora.component';
+import { CalculadoraService } from '../services';
 
 describe('CalculadoraComponent', () => {
   let component: CalculadoraComponent;
@@ -8,6 +11,13 @@ describe('CalculadoraComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        AngularFontAwesomeModule,
+        MatListModule
+      ],
+      providers: [
+        CalculadoraService
+      ],
       declarations: [ CalculadoraComponent ]
     })
     .compileComponents();
