@@ -13,17 +13,18 @@ export class CalculadoraComponent implements OnInit {
   private number2: string;
   private result: number;
   private operation: number;
-
+  historyCalculates = [];
   constructor(private calculadoraService: CalculadoraService) { }
 
   ngOnInit() {
+    this.result = null;
+
     this.clean();
   }
 
   clean(): void {
     this.number1 = '0';
     this.number2 = null;
-    this.result = null;
     this.operation = null;
   }
 
@@ -39,9 +40,21 @@ export class CalculadoraComponent implements OnInit {
     if (operation !== null) {
       this.setOperation(operation);
       this.result = this.calculadoraService.calculate(this.number1, null, this.operation);
+
+      this.addResultToHistory();
+      this.clean();
     } else if (this.number1 && this.number2) {
       this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
+
+      this.addResultToHistory();
+      this.clean();
     }
+  }
+
+  addResultToHistory(): void {
+    this.historyCalculates.push(
+      this.calculadoraService.getResultToAddOnHistory(this.number1, this.number2, this.operation)
+    );
   }
 
   setOperation(operation): void {

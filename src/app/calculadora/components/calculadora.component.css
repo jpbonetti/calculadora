@@ -4,13 +4,38 @@ button {
   border-radius: 4px;
 }
 
+.div-history {
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: 115px;
+}
+
 .display {
   height: 50px;
   border: 1px solid #E0E0E0;
   background: white;
   font-size: 20px;
   margin-bottom: 3px;
+  margin-top: 3px;
   border-radius: 4px;
+}
+
+.list-history {
+  font-size: 20px;
+  float: right;
+}
+
+.div-icon-history {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.icon-history {
+  font-size: 25px;
+  color: #9E9E9E;
+  margin-left: 5px;
 }
 
 .btn-numbers {

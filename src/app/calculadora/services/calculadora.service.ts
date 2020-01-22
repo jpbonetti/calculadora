@@ -49,6 +49,35 @@ export class CalculadoraService {
     return numberDisplay;
   }
 
+  getResultToAddOnHistory(number1: string, number2: string, operation: number): string {
+    if (operation === OperationEnum.PERCENTAGE) {
+      return number1 + this.getOperationSymbol(operation) +
+        ' = ' + this.calculate(number1, null, operation);
+    } else if (operation === OperationEnum.SQUARE_ROOT) {
+      return number1 + this.getOperationSymbol(operation) +
+        ' = ' + this.calculate(number1, null, operation);
+    } else {
+      return number1 + ' ' + this.getOperationSymbol(operation) + ' ' + number2 +
+        ' = ' + this.calculate(number1, number2, operation);
+    }
+  }
+
+  getOperationSymbol(operation: number): string {
+    if (operation === OperationEnum.ADDITION) {
+      return '+';
+    } else if (operation === OperationEnum.DIVISION) {
+      return '/';
+    } else if (operation === OperationEnum.MULTIPLICATION) {
+      return '*';
+    } else if (operation === OperationEnum.SUBTRACTION) {
+      return '-';
+    } else if (operation === OperationEnum.PERCENTAGE) {
+      return '%';
+    } else if (operation === OperationEnum.SQUARE_ROOT) {
+      return '√';
+    }
+  }
+
   validateDotToAlocateNumber(numberDisplay: string): string {
     if (numberDisplay === VAZIO) {
       numberDisplay = this.concatString(ZERO, DOT);

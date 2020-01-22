@@ -1,5 +1,20 @@
 <form>
   <div class="row">
+    <div class="col-xs-1 col-md-1 col-lg-1 div-icon-history">
+      <fa
+        class="icon-history"
+        name="history">
+      </fa>
+    </div>
+    <div class="col-xs-11 col-md-4 col-lg-4 div-history">
+      <mat-list class="list-history">
+        <mat-list-item *ngFor="let item of historyCalculates.slice().reverse()">
+          {{ item }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-xs-12 col-md-5 col-lg-5">
       <input
         id="display"
