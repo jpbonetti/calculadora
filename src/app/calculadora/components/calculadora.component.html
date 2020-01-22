@@ -8,7 +8,7 @@
     </div>
     <div class="col-xs-11 col-md-4 col-lg-4 div-history">
       <mat-list class="list-history">
-        <mat-list-item *ngFor="let item of historyCalculates.slice().reverse()">
+        <mat-list-item class="font-color" *ngFor="let item of historyCalculates.slice().reverse()">
           {{ item }}
         </mat-list-item>
       </mat-list>
@@ -19,7 +19,7 @@
       <input
         id="display"
         name="display"
-        class="form-control text-right display"
+        class="form-control text-right display font-color"
         type="text"
         [value]="display"
         readonly>
@@ -57,7 +57,7 @@
     <div class="col-xs-3 col-sm-1 col-lg-1">
       <button
         type="button"
-        (click)="clean()"
+        (click)="clean(true)"
         class="btn btn-operators">C
       </button>
     </div>

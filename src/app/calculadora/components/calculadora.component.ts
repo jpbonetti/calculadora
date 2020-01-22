@@ -17,15 +17,17 @@ export class CalculadoraComponent implements OnInit {
   constructor(private calculadoraService: CalculadoraService) { }
 
   ngOnInit() {
-    this.result = null;
-
-    this.clean();
+    this.clean(true);
   }
 
-  clean(): void {
+  clean(cleanResult: boolean): void {
     this.number1 = '0';
     this.number2 = null;
     this.operation = null;
+
+    if (cleanResult) {
+      this.result = null;
+    }
   }
 
   addNumber(num: string): void {
@@ -42,12 +44,12 @@ export class CalculadoraComponent implements OnInit {
       this.result = this.calculadoraService.calculate(this.number1, null, this.operation);
 
       this.addResultToHistory();
-      this.clean();
+      this.clean(false);
     } else if (this.number1 && this.number2) {
       this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
 
       this.addResultToHistory();
-      this.clean();
+      this.clean(false);
     }
   }
 

@@ -4,11 +4,8 @@ button {
   border-radius: 4px;
 }
 
-.div-history {
-  height: 100px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  margin-left: 115px;
+.font-color {
+  color: #616161;
 }
 
 .display {
@@ -16,9 +13,54 @@ button {
   border: 1px solid #E0E0E0;
   background: white;
   font-size: 20px;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   border-radius: 4px;
+}
+
+.div-history {
+  height: 135px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: 115px;
+  border-right: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.div-history .mat-list .mat-list-item {
+  height: 25px;
+}
+
+.div-history::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+	background-color: #EEEEEE;
+}
+
+.div-history::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #EEEEEE;
+}
+
+.div-history::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #E0E0E0;
+}
+
+.div-icon-history {
+  position: absolute;
+  padding-top: 40px;
+  margin-left: 15px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.icon-history {
+  font-size: 35px;
+  color: #BDBDBD;
+  margin-left: 5px;
 }
 
 .list-history {
@@ -26,21 +68,15 @@ button {
   float: right;
 }
 
-.div-icon-history {
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 5px;
-}
-
-.icon-history {
-  font-size: 25px;
-  color: #9E9E9E;
-  margin-left: 5px;
-}
-
 .btn-numbers {
   border: 1px solid #E0E0E0;
   background-color: #E0E0E0;
+  color: #424242;
+}
+
+.btn-numbers:hover {
+  border: 1px solid #BDBDBD;
+  background-color: #BDBDBD;
   color: #424242;
 }
 
@@ -50,7 +86,18 @@ button {
   color: white;
 }
 
+.btn-operators:hover {
+  border: 1px solid #BDBDBD;
+  background-color: #BDBDBD;
+  color: white;
+}
+
 .btn-equal {
   background-color: #2196F3;
+  color: white;
+}
+
+.btn-equal:hover {
+  background-color: #42A5F5;
   color: white;
 }
