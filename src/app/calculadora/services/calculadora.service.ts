@@ -51,10 +51,10 @@ export class CalculadoraService {
 
   getResultToAddOnHistory(number1: string, number2: string, operation: number): string {
     if (operation === OperationEnum.PERCENTAGE) {
-      return number1 + this.getOperationSymbol(operation) +
+      return number1 + ' ' + this.getOperationSymbol(operation) +
         ' = ' + this.calculate(number1, null, operation);
     } else if (operation === OperationEnum.SQUARE_ROOT) {
-      return number1 + this.getOperationSymbol(operation) +
+      return number1 + ' ' + this.getOperationSymbol(operation) +
         ' = ' + this.calculate(number1, null, operation);
     } else {
       return number1 + ' ' + this.getOperationSymbol(operation) + ' ' + number2 +
