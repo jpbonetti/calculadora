@@ -50,10 +50,8 @@ export class CalculadoraService {
   }
 
   getResultToAddOnHistory(number1: string, number2: string, operation: number): string {
-    if (operation === OperationEnum.PERCENTAGE) {
-      return number1 + ' ' + this.getOperationSymbol(operation) +
-        ' = ' + this.calculate(number1, null, operation);
-    } else if (operation === OperationEnum.SQUARE_ROOT) {
+    if (operation === OperationEnum.PERCENTAGE
+        || operation === OperationEnum.SQUARE_ROOT) {
       return number1 + ' ' + this.getOperationSymbol(operation) +
         ' = ' + this.calculate(number1, null, operation);
     } else {
@@ -80,14 +78,12 @@ export class CalculadoraService {
 
   validateDotToAlocateNumber(numberDisplay: string): string {
     if (numberDisplay === VAZIO) {
-      numberDisplay = this.concatString(ZERO, DOT);
+      return this.concatString(ZERO, DOT);
     } else if (numberDisplay.split(DOT).length >= 2) {
-      numberDisplay = numberDisplay;
+      return numberDisplay;
     } else {
-      numberDisplay = this.concatString(numberDisplay, DOT);
+      return this.concatString(numberDisplay, DOT);
     }
-
-    return numberDisplay;
   }
 
   concatString(string1: string, string2: string): string {
