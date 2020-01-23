@@ -39,17 +39,17 @@ export class CalculadoraComponent implements OnInit {
   }
 
   calculate(operation): void {
-    if (operation !== null) {
-      this.setOperation(operation);
-      this.result = this.calculadoraService.calculate(this.number1, null, this.operation);
-
-      this.addResultToHistory();
-      this.clean(false);
-    } else if (this.number1 && this.number2) {
-      this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
-
-      this.addResultToHistory();
-      this.clean(false);
+    if (this.number1 !== null && this.number1 !== '0') {
+      if (operation !== null) {
+        this.setOperation(operation);
+        this.result = this.calculadoraService.calculate(this.number1, null, this.operation);
+        this.addResultToHistory();
+        this.clean(false);
+      } else if (this.number2) {
+        this.result = this.calculadoraService.calculate(this.number1, this.number2, this.operation);
+        this.addResultToHistory();
+        this.clean(false);
+      }
     }
   }
 
